@@ -11,16 +11,5 @@ MODEL = "llama3.2"
 
 message = [{"role": "user", "content":"Describe some of the bussiness application of Generative AI"}]
 
-# payload = {
-#     "model": MODEL,
-#     "messages" : message,
-#     "stream" : False
-# }
-
-# response = requests.post(OLLAMA_API, json=payload, headers=HEADER)
-
-# print(response.json()['message']['content'])
-
-
 response = ollama.chat(model = MODEL, messages = message)
 print(response['message']['content'])
